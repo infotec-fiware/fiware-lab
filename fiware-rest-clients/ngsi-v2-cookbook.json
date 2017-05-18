@@ -1,0 +1,1713 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-02-15T17:04:36.128Z",
+	"__export_source": "insomnia.desktop.app:v4.2.11",
+	"resources": [
+		{
+			"_id": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"parentId": null,
+			"modified": 1487177173531,
+			"created": 1484983311232,
+			"name": "NGSI V2 Cookbook",
+			"description": "The propouse of this workspace is to teach about NGSI V2",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_4faea54a6739421db183baa214fd1759",
+			"parentId": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"modified": 1487177173529,
+			"created": 1484983327864,
+			"name": "Base Environment",
+			"data": {
+				"base_url": "http://orion.fiware.infotec.mx:1026"
+			},
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_714dda2e109a4f7dbe858612305a218a",
+			"parentId": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"modified": 1487177173527,
+			"created": 1484983458673,
+			"name": "Default Jar",
+			"cookies": [],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"parentId": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"modified": 1487177173526,
+			"created": 1484985109619,
+			"name": "orion-subscriptions",
+			"environment": {},
+			"metaSortKey": 150,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_654d70efbec142c1b5cab73d36d55836",
+			"parentId": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"modified": 1487177173526,
+			"created": 1486968108656,
+			"name": "batch-operations",
+			"environment": {},
+			"metaSortKey": 200,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"parentId": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"modified": 1487177173525,
+			"created": 1484983424237,
+			"name": "orion-basic-operations",
+			"environment": {},
+			"metaSortKey": 100,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_e583203d42ba44899308590fbd472780",
+			"parentId": "wrk_e87f520357d945af98e69bc3e11abfd0",
+			"modified": 1487177173524,
+			"created": 1486764807718,
+			"name": "orion-api-cookbook",
+			"environment": {},
+			"metaSortKey": 0,
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_06d5d783af634f4aa67c3cc008c0a4f5",
+			"parentId": "env_4faea54a6739421db183baa214fd1759",
+			"modified": 1487177173524,
+			"created": 1484983411004,
+			"name": "development",
+			"data": {
+				"base_url": "http://orion.fiware.infotec.mx:1026"
+			},
+			"_type": "environment"
+		},
+		{
+			"_id": "req_035859f787764f41bac8fdc5ff0f8aff",
+			"parentId": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"modified": 1487177173523,
+			"created": 1486764288882,
+			"url": "{{ base_url }}/v2/entities/Room80/attrs?type=Thing",
+			"name": "update-entity-id-duplicity-type",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"pressure\": {\n    \"metadata\": {},\n    \"type\": \"Integer\",\n    \"value\": 9\n  },\n  \"temperature\": {\n    \"metadata\": {},\n    \"type\": \"Float\",\n    \"value\": 70\n  }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440569,
+			"_type": "request"
+		},
+		{
+			"_id": "req_3745edf702d34b7986f33fa967a69c88",
+			"parentId": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"modified": 1487178201095,
+			"created": 1484985109760,
+			"url": "{{ base_url }}/v2/entities/Bcn-Welt-11/attrs",
+			"name": "update-entity-id",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"pressure\": {\n    \"metadata\": {},\n    \"type\": \"Integer\",\n    \"value\": 100\n  },\n  \"temperature\": {\n    \"metadata\": {},\n    \"type\": \"Float\",\n    \"value\": 100\n  }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440570,
+			"_type": "request"
+		},
+		{
+			"_id": "req_5d10b0a5473e4b768b750fbe7ab051db",
+			"parentId": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"modified": 1487178174757,
+			"created": 1487178064624,
+			"url": "{{ base_url }}/v2/subscriptions/58a488becc66c03a544d2814",
+			"name": "delete-subscriptions",
+			"method": "DELETE",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440518,
+			"_type": "request"
+		},
+		{
+			"_id": "req_91b1838941cd4338a366811bb863a16f",
+			"parentId": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"modified": 1487177451233,
+			"created": 1487177255081,
+			"url": "{{ base_url }}/v2/subscriptions",
+			"name": "subscription",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"description\": \"A subscription to get info about Room1\",\n  \"subject\": {\n    \"entities\": [\n      {\n        \"id\": \"Bcn-Welt-11\",\n        \"type\": \"Room\"\n      }\n    ],\n    \"condition\": {\n      \"attrs\": [\n        \"pressure\"\n      ]\n    }\n  },\n  \"notification\": {\n    \"http\": {\n      \"url\": \"http://consumer.fiware.infotec.mx:8080/notifications\"\n    },\n    \"attrs\": [\n      \"temperature\"\n    ]\n  },\n  \"expires\": \"2018-01-01T14:00:00.00Z\",\n  \"throttling\": 5\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440620,
+			"_type": "request"
+		},
+		{
+			"_id": "req_91e1acbdd7ca40b3bd206a4b8e9a56cf",
+			"parentId": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"modified": 1487177427777,
+			"created": 1484985109784,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "create-entity",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"type\": \"Room\",\n\t\"id\": \"Bcn-Welt-11\",\n\t\"temperature\": {\n\t\t\"value\": 21.7\n\t},\n\t\"pressure\": {\n\t\t\"value\": 60\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440621,
+			"_type": "request"
+		},
+		{
+			"_id": "req_faabbd4f36e2492abfadebf3a5d00cbd",
+			"parentId": "fld_52079f2e4b2b49099d4993fa65eca84f",
+			"modified": 1487178078218,
+			"created": 1487178051160,
+			"url": "{{ base_url }}/v2/subscriptions",
+			"name": "get-subscriptions",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440519,
+			"_type": "request"
+		},
+		{
+			"_id": "req_1721ea3aeb2d40d195b30468ad50637e",
+			"parentId": "fld_654d70efbec142c1b5cab73d36d55836",
+			"modified": 1487177173521,
+			"created": 1486968108680,
+			"url": "{{ base_url }}/v2/entities/Room5/attrs",
+			"name": "update-entity-id",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"pressure\": {\n    \"metadata\": {},\n    \"type\": \"Integer\",\n    \"value\": 98\n  },\n  \"temperature\": {\n    \"metadata\": {},\n    \"type\": \"Float\",\n    \"value\": 98\n  }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440570,
+			"_type": "request"
+		},
+		{
+			"_id": "req_7bfcaf80a2cf4821be64118e144da4f3",
+			"parentId": "fld_654d70efbec142c1b5cab73d36d55836",
+			"modified": 1487177173520,
+			"created": 1486968108687,
+			"url": "{{ base_url }}/v2/op/update",
+			"name": "batch-operation",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"actionType\": \"APPEND\",\n\t\"entities\": [\n\t\t{\n\t\t\t\"type\": \"Room\",\n\t\t\t\"id\": \"Bcn-Welt\",\n\t\t\t\"temperature\": {\n\t\t\t\t\"value\": 21.7\n\t\t\t},\n\t\t\t\"humidity\": {\n\t\t\t\t\"value\": 60\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"type\": \"Room\",\n\t\t\t\"id\": \"Mad_Aud\",\n\t\t\t\"temperature\": {\n\t\t\t\t\"value\": 22.9\n\t\t\t},\n\t\t\t\"humidity\": {\n\t\t\t\t\"value\": 85\n\t\t\t}\n\t\t}\n\t]\n}"
+			},
+			"parameters": [
+				{
+					"name": "",
+					"value": ""
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440621,
+			"_type": "request"
+		},
+		{
+			"_id": "req_7e9b42723ac24b228389752d251b8097",
+			"parentId": "fld_654d70efbec142c1b5cab73d36d55836",
+			"modified": 1487177173520,
+			"created": 1486968108676,
+			"url": "{{ base_url }}/v2/entities/Room80/attrs?type=Thing",
+			"name": "update-entity-id-duplicity-type",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"pressure\": {\n    \"metadata\": {},\n    \"type\": \"Integer\",\n    \"value\": 9\n  },\n  \"temperature\": {\n    \"metadata\": {},\n    \"type\": \"Float\",\n    \"value\": 70\n  }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440569,
+			"_type": "request"
+		},
+		{
+			"_id": "req_033dcd7e2f4f42d788855bd4a2c6106f",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173519,
+			"created": 1484984423500,
+			"url": "{{ base_url }}/v2/entities/Room3",
+			"name": "get-entities",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440570.5,
+			"_type": "request"
+		},
+		{
+			"_id": "req_2a05bf1774e54a098286c81f7cae174e",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173519,
+			"created": 1484984492135,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "get-all-entities",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440520,
+			"_type": "request"
+		},
+		{
+			"_id": "req_393b02fe9dde4d209fb1270643c4164e",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173518,
+			"created": 1484984808809,
+			"url": "{{ base_url }}/v2/entities?options=keyValues",
+			"name": "get-all-entities-key-values",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440519,
+			"_type": "request"
+		},
+		{
+			"_id": "req_5fde647c737f432d940779e091f79bee",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173517,
+			"created": 1484984596228,
+			"url": "{{ base_url }}/v2/entities/Room1?options=keyValues",
+			"name": "update-entity-key-values",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440569,
+			"_type": "request"
+		},
+		{
+			"_id": "req_782bb2c58e624ecfa9994fecefe42624",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173516,
+			"created": 1486756839913,
+			"url": "{{ base_url }}/v2/entities/Room99/attrs/temperature/value",
+			"name": "update-entity-attrs-value",
+			"method": "PUT",
+			"body": {
+				"mimeType": "",
+				"text": "23"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "text/plain"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440569,
+			"_type": "request"
+		},
+		{
+			"_id": "req_9e1acf8f8718423787caed74eb2d08eb",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173516,
+			"created": 1484983629783,
+			"url": "{{ base_url }}/v2/entities?options=keyValues",
+			"name": "create-entity",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"id\": \"34f036f9eef1f403c0ea66c55b8cdbace4b5f7a6\",\n    \"type\": \"Restaurant\",\n    \"address\": {\n      \"streetAddress\": \"Avenida de Los Huetos 17\",\n      \"addressRegion\": \"Álava\",\n      \"addressLocality\": \"Vitoria-Gasteiz\",\n      \"postalCode\": \"01010\"\n    },\n    \"aggregateRating\": {\n      \"reviewCount\": 1,\n      \"ratingValue\": 2\n    },\n    \"capacity\": 160,\n    \"department\": \"Franchise4\",\n    \"description\": \"El restaurante Araba cuenta con amplios salones para todo tipo de celebraciones, y además ...\",\n    \"location\": \"42.8538811, -2.7006836\",\n    \"name\": \"Araba\",\n    \"occupancyLevels\": 0,\n    \"priceRange\": 42,\n    \"telephone\": \"945 222 669\",\n    \"url\": \"http://www.restaurantearaba.com/\"\n  }\n"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440571,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a3764e5f99754e5da4eed610aeb2202b",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173514,
+			"created": 1484984115014,
+			"url": "{{ base_url }}/v2/entities/Room3/attrs",
+			"name": "update-entity-id",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"name\": {\n\t\t\"value\": \"hola\"\n\t},\n\t\"pressure\": {\n\t\t\"metadata\": {},\n\t\t\"type\": \"Integer\",\n\t\t\"value\": 720\n\t},\n\t\"temperature\": {\n\t\t\"metadata\": {},\n\t\t\"type\": \"Float\",\n\t\t\"value\": 23\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1484983440570,
+			"_type": "request"
+		},
+		{
+			"_id": "req_b260e8b0119a4fb990833494145f879e",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173513,
+			"created": 1484984936224,
+			"url": "{{ base_url }}/v2/entities/Room1?options=values&attrs=pressure,temperature",
+			"name": "get-all-entities-values",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440518,
+			"_type": "request"
+		},
+		{
+			"_id": "req_bb94965b56ce4f30bf75793a8239d832",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173511,
+			"created": 1484983440621,
+			"url": "{{ base_url }}/version",
+			"name": "check-version",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440621,
+			"_type": "request"
+		},
+		{
+			"_id": "req_db6683e3b86d49d5a47a0125ffb52568",
+			"parentId": "fld_e34bc05cf0cf472ab246c52ca6516e10",
+			"modified": 1487177173508,
+			"created": 1484985002664,
+			"url": "{{ base_url }}/v2/entities?q=temperature>22",
+			"name": "get-entities-by-temperature",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440517,
+			"_type": "request"
+		},
+		{
+			"_id": "fld_05f30115e6414a83a752f93a72e951fe",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173507,
+			"created": 1486776933088,
+			"name": "context-entity",
+			"environment": {},
+			"metaSortKey": -1486776984573,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_1a2b3572c0fc4e858eba4db721253cfe",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173507,
+			"created": 1486776984548,
+			"name": "query-context",
+			"environment": {},
+			"metaSortKey": -1486776984548,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_250ba2d9b8ad4a179218b81eb1ac18fc",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173506,
+			"created": 1486777127957,
+			"name": "context-attributes",
+			"environment": {},
+			"metaSortKey": -1486776984448,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_6e2eb59b959f4a709c6e0205f9ff9b1a",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173506,
+			"created": 1486777084241,
+			"name": "provided-context",
+			"environment": {},
+			"metaSortKey": -1486776984498,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173506,
+			"created": 1486777149281,
+			"name": "subscriptions",
+			"environment": {},
+			"metaSortKey": -1486776984398,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_bfcda1a462cf44a395e4920960748e81",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173505,
+			"created": 1486776962152,
+			"name": "api-root",
+			"environment": {},
+			"metaSortKey": -1486776984648,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_d4f3aeb7ec2541f09583d97ab9003de6",
+			"parentId": "fld_e583203d42ba44899308590fbd472780",
+			"modified": 1487177173504,
+			"created": 1486776914711,
+			"name": "entity-collection",
+			"environment": {},
+			"metaSortKey": -1486776984598,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_38ced29215734d0da4cf76ee2bf8be97",
+			"parentId": "fld_05f30115e6414a83a752f93a72e951fe",
+			"modified": 1487177173504,
+			"created": 1486779626432,
+			"name": "retrieve-entity-data",
+			"environment": {},
+			"metaSortKey": -1486779640154,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_953d309872304d15936a677fcfb69e58",
+			"parentId": "fld_05f30115e6414a83a752f93a72e951fe",
+			"modified": 1487177173503,
+			"created": 1486779640104,
+			"name": "partial-entity-retrieval",
+			"environment": {},
+			"metaSortKey": -1486779640104,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_a074d17154264ec7bdacd0211fea1f1b",
+			"parentId": "fld_1a2b3572c0fc4e858eba4db721253cfe",
+			"modified": 1487177173503,
+			"created": 1486780774464,
+			"name": "query-entities",
+			"environment": {},
+			"metaSortKey": -1486780774464,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_03a463120bba4848901882fae04aeaf2",
+			"parentId": "fld_250ba2d9b8ad4a179218b81eb1ac18fc",
+			"modified": 1487177173502,
+			"created": 1486936179773,
+			"name": "attribute-collection",
+			"environment": {},
+			"metaSortKey": -1486936202030,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_1f46fdf5b9684d2486df80db115d0843",
+			"parentId": "fld_250ba2d9b8ad4a179218b81eb1ac18fc",
+			"modified": 1487177173502,
+			"created": 1486936201980,
+			"name": "single-attribute",
+			"environment": {},
+			"metaSortKey": -1486936201980,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_ce71fb4bea124e269e705ade5646df2b",
+			"parentId": "fld_250ba2d9b8ad4a179218b81eb1ac18fc",
+			"modified": 1487177173501,
+			"created": 1486937714472,
+			"name": "attribute-values",
+			"environment": {},
+			"metaSortKey": -1486936201930,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_1c8479b7e9ba46c19da1a0e4222bc4ce",
+			"parentId": "fld_6e2eb59b959f4a709c6e0205f9ff9b1a",
+			"modified": 1487177173501,
+			"created": 1486930740262,
+			"name": "create-new-entity",
+			"environment": {},
+			"metaSortKey": -1486930750892,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_69c7c6a3285e4848a70c7e89c2370644",
+			"parentId": "fld_6e2eb59b959f4a709c6e0205f9ff9b1a",
+			"modified": 1487177173499,
+			"created": 1486930761422,
+			"name": "remove-entity",
+			"environment": {},
+			"metaSortKey": -1486930750842,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_0de80fdb32d54b10bceb820c592bbab0",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173498,
+			"created": 1486945921911,
+			"url": "{{ base_url }}/v2/subscriptions/58a01f9f3c7a8717d7a6c393",
+			"name": "remove-subscription",
+			"method": "DELETE",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486943131778,
+			"_type": "request"
+		},
+		{
+			"_id": "req_1680eaa3e391481fa379a7c418138c07",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173498,
+			"created": 1486943284630,
+			"url": "{{ base_url }}/v2/subscriptions/58a01f9f3c7a8717d7a6c393",
+			"name": "get-the-details-of-a-subscription",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486943131781,
+			"_type": "request"
+		},
+		{
+			"_id": "req_85fd8aa8fee6432cba64e470e452f9c9",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173497,
+			"created": 1486945775868,
+			"url": "{{ base_url }}/v2/subscriptions/58a01f9f3c7a8717d7a6c393",
+			"name": "partial-update-subscription",
+			"method": "PATCH",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"expires\": \"2040-01-01T14:00:00.00Z\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486943131779,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8959fda2029f44e8ad1d1717d363e1f4",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173496,
+			"created": 1486943578282,
+			"url": "{{ base_url }}/v2/subscriptions",
+			"name": "create-subscription",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"description\": \"Update average rating\",\n\t\"subject\": {\n\t\t\"entities\": [\n\t\t\t{\n\t\t\t\t\"id\": \"Room3\",\n\t\t\t\t\"type\": \"Room\"\n\t\t\t}\n\t\t],\n\t\t\"condition\": {\n\t\t\t\"attrs\": [\n\t\t\t\t\"temperature\"\n\t\t\t]\n\t\t}\n\t},\n\t\"notification\": {\n\t\t\"http\": {\n\t\t\t\"url\": \"http://192.168.83.2:8080/notifications\"\n\t\t},\n\t\t\"attrs\": [\n\t\t\t\"temperature\"\n\t\t]\n\t},\n\t\"expires\": \"2020-04-05T14:00:00.00Z\",\n\t\"throttling\": 5\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486943131780,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a57f711ed8bf472dbb71b81cae031e14",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173494,
+			"created": 1486943278661,
+			"url": "{{ base_url }}/v2/subscriptions",
+			"name": "pagination",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "limit",
+					"value": "1"
+				},
+				{
+					"name": "offset",
+					"value": "1"
+				},
+				{
+					"name": "options",
+					"value": "count"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486943131782,
+			"_type": "request"
+		},
+		{
+			"_id": "req_c2aaede2da324a1b9044d5c35f14c3cb",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173493,
+			"created": 1486943131783,
+			"url": "{{ base_url }}/v2/subscriptions",
+			"name": "list-all-subscriptions-present-in-the-system",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486943131783,
+			"_type": "request"
+		},
+		{
+			"_id": "req_dbd565d7e3b84ba9bee474d9699137d2",
+			"parentId": "fld_a83a8460ffc74d78a5da7c92a63db932",
+			"modified": 1487177173492,
+			"created": 1487052525886,
+			"url": "{{ base_url }}/v2/subscriptions",
+			"name": "create-subscription-with-condition",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"description\": \"Update temperature\",\n\t\"subject\": {\n\t\t\"entities\": [\n\t\t\t{\n\t\t\t\t\"id\": \"Room3\",\n\t\t\t\t\"type\": \"Room\"\n\t\t\t}\n\t\t],\n\t\t\"condition\": {\n\t\t\t\"attrs\": [\n\t\t\t\t\"temperature\"\n\t\t\t]\n\t\t},\n\t\t\"expression\": {\n\t\t\t\"q\": \"temperature>40\"\n\t\t}\n\t},\n\t\"notification\": {\n\t\t\"http\": {\n\t\t\t\"url\": \"http://192.168.83.2:8080/notifications\"\n\t\t},\n\t\t\"attrs\": [\n\t\t\t\"temperature\"\n\t\t]\n\t},\n\t\"expires\": \"2020-04-05T14:00:00.00Z\",\n\t\"throttling\": 5\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486943131779,
+			"_type": "request"
+		},
+		{
+			"_id": "req_92644ac8e85b42e3a750449f626acef0",
+			"parentId": "fld_bfcda1a462cf44a395e4920960748e81",
+			"modified": 1487177173491,
+			"created": 1486777250363,
+			"url": "{{ base_url }}/v2",
+			"name": "retrive-entry-points",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1484983440619,
+			"_type": "request"
+		},
+		{
+			"_id": "fld_0c31f1b6080441dcb73df9c4d3429059",
+			"parentId": "fld_d4f3aeb7ec2541f09583d97ab9003de6",
+			"modified": 1487177173491,
+			"created": 1486777380840,
+			"name": "list-all-entities",
+			"environment": {},
+			"metaSortKey": -1486778168566,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_5065860481984e9a953f8b543e6958e9",
+			"parentId": "fld_d4f3aeb7ec2541f09583d97ab9003de6",
+			"modified": 1487177173490,
+			"created": 1486778168516,
+			"name": "filter-entities",
+			"environment": {},
+			"metaSortKey": -1486778168516,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_3170478f26c0428e83384257242c054d",
+			"parentId": "fld_38ced29215734d0da4cf76ee2bf8be97",
+			"modified": 1487177173489,
+			"created": 1486779685849,
+			"url": "{{ base_url }}/v2/entities/Room2",
+			"name": "by-id",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187711,
+			"_type": "request"
+		},
+		{
+			"_id": "req_9f2ec2d353be42a3a2c818804a0508b9",
+			"parentId": "fld_38ced29215734d0da4cf76ee2bf8be97",
+			"modified": 1487177173489,
+			"created": 1486780212936,
+			"url": "{{ base_url }}/v2/entities/Room2",
+			"name": "by-id-and-type",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "type",
+					"value": "Room"
+				}
+			],
+			"headers": [
+				{
+					"name": "",
+					"value": ""
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187709,
+			"_type": "request"
+		},
+		{
+			"_id": "req_d23f231320cf4caca196c8c8d49b34d6",
+			"parentId": "fld_38ced29215734d0da4cf76ee2bf8be97",
+			"modified": 1487177173488,
+			"created": 1486780148223,
+			"url": "{{ base_url }}/v2/entities/id-not-exist",
+			"name": "by-id-not-exist",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "",
+					"value": ""
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187710,
+			"_type": "request"
+		},
+		{
+			"_id": "req_5fed1e9b543f4911964928f4f9dbc2f9",
+			"parentId": "fld_953d309872304d15936a677fcfb69e58",
+			"modified": 1487177173487,
+			"created": 1486780305024,
+			"url": "{{ base_url }}/v2/entities/Room1",
+			"name": "one-entity-attribute",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "attrs",
+					"value": "temperature"
+				}
+			],
+			"headers": [
+				{
+					"name": "",
+					"value": ""
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187708,
+			"_type": "request"
+		},
+		{
+			"_id": "req_ec504e26bdbd4b8da531dc0113230fc3",
+			"parentId": "fld_953d309872304d15936a677fcfb69e58",
+			"modified": 1487177173486,
+			"created": 1486780678114,
+			"url": "{{ base_url }}/v2/entities/Room1",
+			"name": "several-entity-attributes",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "attrs",
+					"value": "temperature,pressure"
+				}
+			],
+			"headers": [
+				{
+					"name": "",
+					"value": ""
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187707,
+			"_type": "request"
+		},
+		{
+			"_id": "req_5149ee0002974551bbcb419dc8fb707b",
+			"parentId": "fld_a074d17154264ec7bdacd0211fea1f1b",
+			"modified": 1487177173486,
+			"created": 1486930441698,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "query-no-results",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "q",
+					"value": "capacity>500"
+				}
+			],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187704,
+			"_type": "request"
+		},
+		{
+			"_id": "req_b4915fe829cd42b6911d0275c2b8b004",
+			"parentId": "fld_a074d17154264ec7bdacd0211fea1f1b",
+			"modified": 1487177173485,
+			"created": 1486929172072,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "query-by-distance-to-a-certain-point",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "type",
+					"value": "Restaurant"
+				},
+				{
+					"name": "coords",
+					"value": "42.8538811,"
+				},
+				{
+					"name": "geometry",
+					"value": "point"
+				},
+				{
+					"name": "georel",
+					"value": "near;maxDistance:100"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187705,
+			"_type": "request"
+		},
+		{
+			"_id": "req_ebd16fa485c949c6843bea6a13bc90a3",
+			"parentId": "fld_a074d17154264ec7bdacd0211fea1f1b",
+			"modified": 1487177173484,
+			"created": 1486780751706,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "query-by-attribute-content",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "type",
+					"value": "Room"
+				},
+				{
+					"name": "q",
+					"value": "temperature.value>20"
+				},
+				{
+					"name": "attr",
+					"value": "pressure,temperature"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486778187706,
+			"_type": "request"
+		},
+		{
+			"_id": "req_13e0a9348821427e8c7c7cadf65953dd",
+			"parentId": "fld_03a463120bba4848901882fae04aeaf2",
+			"modified": 1487177173484,
+			"created": 1486936545489,
+			"url": "{{ base_url }}/v2/entities/Room2/attrs",
+			"name": "list-all-keyValue-mode",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "options",
+					"value": "keyValue"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163337,
+			"_type": "request"
+		},
+		{
+			"_id": "req_613fc1b92011461b976f04990f9b6275",
+			"parentId": "fld_03a463120bba4848901882fae04aeaf2",
+			"modified": 1487177173483,
+			"created": 1486936908218,
+			"url": "{{ base_url }}/v2/entities/Room3/attrs",
+			"name": "replace-all-keyValue-mode",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"temperature\": 23,\n\t\"pressure\": 100\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163336,
+			"_type": "request"
+		},
+		{
+			"_id": "req_f48d46c815c74f7d8a1097dfda518a77",
+			"parentId": "fld_03a463120bba4848901882fae04aeaf2",
+			"modified": 1487177173482,
+			"created": 1486936303745,
+			"url": "{{ base_url }}/v2/entities/Room1/attrs",
+			"name": "list-all-normalized-mode",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486931163338,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a2d35905f29d48bb9728d9425cdb9fc1",
+			"parentId": "fld_1f46fdf5b9684d2486df80db115d0843",
+			"modified": 1487177173482,
+			"created": 1486937625637,
+			"url": "{{ base_url }}/v2/entities/Room2/attrs/temperature",
+			"name": "remove",
+			"method": "DELETE",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"value\": 10\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163334,
+			"_type": "request"
+		},
+		{
+			"_id": "req_b498e7c363f7425db4c1d2c10f1d2f51",
+			"parentId": "fld_1f46fdf5b9684d2486df80db115d0843",
+			"modified": 1487177173481,
+			"created": 1486937497583,
+			"url": "{{ base_url }}/v2/entities/Room2/attrs/noexiste",
+			"name": "get-not-exist",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486931163336,
+			"_type": "request"
+		},
+		{
+			"_id": "req_e996a65ec58947e092417da2a927f30d",
+			"parentId": "fld_1f46fdf5b9684d2486df80db115d0843",
+			"modified": 1487177173481,
+			"created": 1486937554295,
+			"url": "{{ base_url }}/v2/entities/Room2/attrs/temperature",
+			"name": "update",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"value\": 10\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163335,
+			"_type": "request"
+		},
+		{
+			"_id": "req_ff7f6826c585479a81878b6c778a99f7",
+			"parentId": "fld_1f46fdf5b9684d2486df80db115d0843",
+			"modified": 1487177173480,
+			"created": 1486937339214,
+			"url": "{{ base_url }}/v2/entities/Room2/attrs/temperature",
+			"name": "get",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486931163337,
+			"_type": "request"
+		},
+		{
+			"_id": "req_15340216048e4d85ac267e4992268305",
+			"parentId": "fld_ce71fb4bea124e269e705ade5646df2b",
+			"modified": 1487177173479,
+			"created": 1486937714497,
+			"url": "{{ base_url }}/v2/entities/Room3/attrs/pressure",
+			"name": "update-as-json",
+			"method": "PUT",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"value\": \"fdfdfdfdf\"\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163334,
+			"_type": "request"
+		},
+		{
+			"_id": "req_3d5994488358430bb91c93385e1d52cd",
+			"parentId": "fld_ce71fb4bea124e269e705ade5646df2b",
+			"modified": 1487177173479,
+			"created": 1486937714526,
+			"url": "{{ base_url }}/v2/entities/Room3/attrs/temperature/value",
+			"name": "update-as-text",
+			"method": "PUT",
+			"body": {
+				"mimeType": "text/plain",
+				"text": "21"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "text/plain"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163335,
+			"_type": "request"
+		},
+		{
+			"_id": "req_9064cbcb36304a9dacf00954ec7dcdb6",
+			"parentId": "fld_ce71fb4bea124e269e705ade5646df2b",
+			"modified": 1487177173478,
+			"created": 1486937714512,
+			"url": "{{ base_url }}/v2/entities/Room3/attrs/temperature",
+			"name": "get-as-json",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163336,
+			"_type": "request"
+		},
+		{
+			"_id": "req_e8987cdc2350484488bf8a8fba2fd7b9",
+			"parentId": "fld_ce71fb4bea124e269e705ade5646df2b",
+			"modified": 1487177173477,
+			"created": 1486937714537,
+			"url": "{{ base_url }}/v2/entities/Room3/attrs/pressure/value",
+			"name": "get-as-text",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Accept",
+					"value": "text/plain"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163337,
+			"_type": "request"
+		},
+		{
+			"_id": "req_3c3d3ac19ffc41c6b8328092691ff3b2",
+			"parentId": "fld_1c8479b7e9ba46c19da1a0e4222bc4ce",
+			"modified": 1487177173477,
+			"created": 1486935603331,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "creation-error.-already-exists",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"type\": \"Review\",\n\t\"id\": \"review-1\",\n\t\"author\": \"client1234\",\n\t\"itemReviewed\": \"0115206c51f60b48b77e4c937835795c33bb953f\",\n\t\"reviewBody\": \"Cheap and nice place to eat\",\n\t\"ratingValue\": 4\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163339,
+			"_type": "request"
+		},
+		{
+			"_id": "req_7fd5c61a0a9743619860e8e5edb487d1",
+			"parentId": "fld_1c8479b7e9ba46c19da1a0e4222bc4ce",
+			"modified": 1487177173475,
+			"created": 1486931149371,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "normalized-mode",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"type\": \"Review\",\n\t\"id\": \"review-infotec-6\",\n\t\"author\": {\n\t\t\"type\": \"Person\",\n\t\t\"value\": \"dads\"\n\t},\n\t\"itemReviewed\": {\n\t\t\"type\": \"Restaurant\",\n\t\t\"value\": \"\"\n\t},\n\t\"reviewBody\": {\n\t\t\"value\": \"Cheap and nice place to eat.\"\n\t},\n\t\"reviewRating\": {\n\t\t\"type\": \"Rating\",\n\t\t\"value\": 4\n\t}\n}"
+			},
+			"parameters": [
+				{
+					"name": "",
+					"value": ""
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163392,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8d2afd29d1374085bcb0ddae47ba5304",
+			"parentId": "fld_1c8479b7e9ba46c19da1a0e4222bc4ce",
+			"modified": 1487177173473,
+			"created": 1486935216491,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "georeferencing-using-simple-location-format",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"id\": \"restaurant-infotec-22\",\n  \"type\": \"Restaurant\",\n  \"address\": {\n    \"type\": \"PostalAddress\",\n    \"value\": {\n      \"streetAddress\": \"Cuesta de las Cabras Aldapa 2\",\n      \"addressLocality\": \"Alegría-Dulantzi\",\n      \"addressRegion\": \"Araba\",\n      \"postalCode\": \"01240\"\n    }\n  },\n  \"name\": {\n    \"value\": \"Sample restaurant\"\n  },\n  \"location\": {\n    \"type\": \"geo:point\",\n    \"value\": \"42.8404625, -2.5123277\"\n  },\n  \"priceRange\": {\n    \"value\": 10\n  },\n  \"telephone\": {\n    \"value\": \"555 55 55 55\"\n  },\n  \"capacity\": {\n    \"type\": \"propertyValue\",\n    \"value\": 120\n  },\n  \"description\": {\n    \"value\": \"Sample restaurant\"\n  }\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163341,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a1a856f57d564c729e536d6df874170c",
+			"parentId": "fld_1c8479b7e9ba46c19da1a0e4222bc4ce",
+			"modified": 1487177173472,
+			"created": 1486931163342,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "keyValues-mode",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"type\": \"Review\",\n\t\"id\": \"review-infotec-10\",\n\t\"author\": \"client1234\",\n\t\"itemReviewed\": \"0115206c51f60b48b77e4c937835795c33bb953f\",\n\t\"reviewBody\": \"Cheap and nice place to eat\",\n\t\"ratingValue\": 4,\n\t\"reviewRating\": 4\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163342,
+			"_type": "request"
+		},
+		{
+			"_id": "req_d6533a95898c496a967a85150ad1da59",
+			"parentId": "fld_1c8479b7e9ba46c19da1a0e4222bc4ce",
+			"modified": 1487177173471,
+			"created": 1486935458039,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "georeferencing-using-geojson",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n  \"id\": \"benito-juarez-1\",\n  \"type\": \"Aeropuerto\",\n  \"name\": {\n    \"value\": \"Aeropuerto Benito Juarez\"\n  },\n  \"location\": {\n    \"type\": \"geo:json\",\n    \"value\": {\n      \"type\": \"Polygon\",\n      \"coordinates\": [\n        [\n          [\n            -2.763969,\n            42.847476\n          ],\n          [\n            -2.743151,\n            42.826006\n          ],\n          [\n            -2.65374,\n            42.826485\n          ],\n          [\n            -2.630934,\n            42.867061\n          ],\n          [\n            -2.640617,\n            42.881801\n          ],\n          [\n            -2.726723,\n            42.867767\n          ],\n          [\n            -2.763969,\n            42.847476\n          ]\n        ]\n      ]\n    }\n  }\n}"
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486931163340,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a6a197ddd07c438d9a7a88c8046000e0",
+			"parentId": "fld_69c7c6a3285e4848a70c7e89c2370644",
+			"modified": 1487177173470,
+			"created": 1486935743458,
+			"url": "{{ base_url }}/v2/entities/Room2",
+			"name": "by-id",
+			"method": "DELETE",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486931163338,
+			"_type": "request"
+		},
+		{
+			"_id": "req_22c1b0f1a8cd4ce0ab4633b52bfe933b",
+			"parentId": "fld_0c31f1b6080441dcb73df9c4d3429059",
+			"modified": 1487177173469,
+			"created": 1486777395950,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "normalized-mode",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486777395950,
+			"_type": "request"
+		},
+		{
+			"_id": "req_40dc8d90a7e046fb8ce66f0ed9df5f53",
+			"parentId": "fld_0c31f1b6080441dcb73df9c4d3429059",
+			"modified": 1487177173467,
+			"created": 1486777399015,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "key-values-mode",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486777395949,
+			"_type": "request"
+		},
+		{
+			"_id": "req_e199257d0fd64f81b9116dd63be3e47b",
+			"parentId": "fld_0c31f1b6080441dcb73df9c4d3429059",
+			"modified": 1487177173466,
+			"created": 1486777654700,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "pagination",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "options",
+					"value": "count"
+				},
+				{
+					"name": "limit",
+					"value": "3"
+				},
+				{
+					"name": "offset",
+					"value": "3"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486777395948,
+			"_type": "request"
+		},
+		{
+			"_id": "req_140473542f4e4f0a95316d7a8090dd0c",
+			"parentId": "fld_5065860481984e9a953f8b543e6958e9",
+			"modified": 1487177173465,
+			"created": 1486778641292,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "by-id-list",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"value": "Room1,Room2,Room3"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187715,
+			"_type": "request"
+		},
+		{
+			"_id": "req_1605a70c44b343eaa65fa4587490ac28",
+			"parentId": "fld_5065860481984e9a953f8b543e6958e9",
+			"modified": 1487177173464,
+			"created": 1486778656592,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "by-type-list",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "type",
+					"value": "Room,Tree,DeviceModel"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187714,
+			"_type": "request"
+		},
+		{
+			"_id": "req_3cf30b78b35c4afabeb7413d310b5ff0",
+			"parentId": "fld_5065860481984e9a953f8b543e6958e9",
+			"modified": 1486782492697,
+			"created": 1486779523464,
+			"url": "http://orion.fiware.infotec.mx:1026/v2/entities",
+			"name": "by-pattern-matching (Copy)",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "idPattern",
+					"value": "^0115206c51f60b48b77e4.*"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187712,
+			"_type": "request"
+		},
+		{
+			"_id": "req_4a9de804fa80400dbd659f0e114ac89f",
+			"parentId": "fld_5065860481984e9a953f8b543e6958e9",
+			"modified": 1487177173463,
+			"created": 1486778616409,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "by-type",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "type",
+					"value": "Room"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187716,
+			"_type": "request"
+		},
+		{
+			"_id": "req_b68cb7f974fd490a88530c9904489a1f",
+			"parentId": "fld_5065860481984e9a953f8b543e6958e9",
+			"modified": 1487177173462,
+			"created": 1486778670932,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "by-pattern-matching",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "idPattern",
+					"value": "^Ro.*1$"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187713,
+			"_type": "request"
+		},
+		{
+			"_id": "req_ce198338a41941bf9b5a371db5a859e9",
+			"parentId": "fld_5065860481984e9a953f8b543e6958e9",
+			"modified": 1487177173460,
+			"created": 1486778196079,
+			"url": "{{ base_url }}/v2/entities",
+			"name": "by-id",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "id",
+					"value": "Room2"
+				},
+				{
+					"name": "options",
+					"value": "keyValues"
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1486778187717,
+			"_type": "request"
+		}
+	]
+}

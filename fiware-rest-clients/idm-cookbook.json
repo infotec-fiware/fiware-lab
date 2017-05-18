@@ -1,0 +1,302 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-02-14T08:05:15.678Z",
+	"__export_source": "insomnia.desktop.app:v4.2.11",
+	"resources": [
+		{
+			"_id": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"parentId": null,
+			"modified": 1486839941775,
+			"created": 1486839941775,
+			"name": "Identity Manager",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_2c5b1f2ffbc24bd08c13c5fc7a88eff5",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486839972938,
+			"created": 1486839972938,
+			"name": "Base Environment",
+			"data": {},
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_8ff9c102c8104e5fa5dfa703d0217524",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486839983077,
+			"created": 1486839973109,
+			"name": "Default Jar",
+			"cookies": [
+				{
+					"creation": "2017-02-11T19:06:22.863Z",
+					"key": "logout_reason",
+					"value": "\"Session expired\"",
+					"expires": "2017-02-11T19:06:32.000Z",
+					"maxAge": 10,
+					"path": "/",
+					"hostOnly": true,
+					"domain": "192.168.83.4",
+					"lastAccessed": "2017-02-11T19:06:22.886Z"
+				},
+				{
+					"creation": "2017-02-11T19:06:23.067Z",
+					"key": "csrftoken",
+					"value": "1NgZirr0vTFelzT6HRw8hg66G7ZhcYHb",
+					"expires": "2018-02-10T19:06:23.000Z",
+					"maxAge": 31449600,
+					"path": "/",
+					"hostOnly": true,
+					"domain": "192.168.83.4",
+					"lastAccessed": "2017-02-11T19:06:23.067Z"
+				}
+			],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_0dcc603566a64952a66d55bd200de662",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486848383208,
+			"created": 1486848286874,
+			"url": "http://192.168.83.4:5000/v3/users",
+			"name": "create-user",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"user\": {\n        \"default_project_id\": \"263fd9\",\n        \"domain_id\": \"1789d1\",\n        \"enabled\": true,\n        \"name\": \"James Doe\",\n        \"password\": \"secretsecret\"\n    }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486848286874,
+			"_type": "request"
+		},
+		{
+			"_id": "req_1f53a24963054e45a5810d41032cc524",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1487059488753,
+			"created": 1487058816298,
+			"url": "http://192.168.83.4:8080/authzforce-ce/domains/7morxvKLEeajCgJCrBEABA/pap/policySet",
+			"name": "get-domains",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "x-subject-token",
+					"value": "3e3fa528a87b44fe9597a74e285b552a"
+				},
+				{
+					"name": "vary",
+					"value": "X-Auth-Token"
+				},
+				{
+					"name": "content-type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486848286973,
+			"_type": "request"
+		},
+		{
+			"_id": "req_2d8c1bd42f844cc09b0b46d44ec489ef",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486841207203,
+			"created": 1486839959656,
+			"url": "http://192.168.83.4:5000/v3/auth/tokens",
+			"name": "create-auth",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"auth\": {\n\t\t\"identity\": {\n\t\t\t\"methods\": [\n\t\t\t\t\"password\"\n\t\t\t],\n\t\t\t\"password\": {\n\t\t\t\t\"user\": {\n\t\t\t\t\t\"name\": \"idm\",\n\t\t\t\t\t\"domain\": {\n\t\t\t\t\t\t\"name\": \"Default\"\n\t\t\t\t\t},\n\t\t\t\t\t\"password\": \"idm\"\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486839959656,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8370ab4bfe6840a8bdfce6b067ef8321",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486856579602,
+			"created": 1486848434745,
+			"url": "http://192.168.83.4:5000/v3/auth/tokens",
+			"name": "auth-unscoped",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"auth\": {\n        \"identity\": {\n            \"methods\": [\n                \"password\"\n            ],\n            \"password\": {\n                \"user\": {\n                    \"name\": \"idm\",\n                    \"domain\": {\n                        \"name\": \"Default\"\n                    },\n                    \"password\": \"idm\"\n                }\n            }\n        }\n    }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486848286924,
+			"_type": "request"
+		},
+		{
+			"_id": "req_8c6993cf89be40ae8d47becc965360c9",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486841316520,
+			"created": 1486841185213,
+			"url": "http://192.168.83.4:5000/v3/users",
+			"name": "get-users",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "x-subject-token",
+					"value": "3e3fa528a87b44fe9597a74e285b552a"
+				},
+				{
+					"name": "vary",
+					"value": "X-Auth-Token"
+				},
+				{
+					"name": "content-type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486839959655,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a30e2d403efc462d899f79493f20ff09",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1487059343908,
+			"created": 1487059324192,
+			"url": "http://192.168.83.4:8080/authzforce-ce/domains",
+			"name": "create-domains",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/xml",
+				"text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<taz:domainProperties\n\txmlns:taz=\"http://authzforce.github.io/rest-api-model/xmlns/authz/5\" />"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "x-subject-token",
+					"value": "3e3fa528a87b44fe9597a74e285b552a"
+				},
+				{
+					"name": "vary",
+					"value": "X-Auth-Token"
+				},
+				{
+					"name": "content-type",
+					"value": "application/xml"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486848286972,
+			"_type": "request"
+		},
+		{
+			"_id": "req_af412d65ea634335a648230a613aa1ff",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1487058360400,
+			"created": 1487058330415,
+			"url": "http://192.168.83.4:5000/v3",
+			"name": "get-details",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "x-subject-token",
+					"value": "3e3fa528a87b44fe9597a74e285b552a"
+				},
+				{
+					"name": "vary",
+					"value": "X-Auth-Token"
+				},
+				{
+					"name": "content-type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486848286974,
+			"_type": "request"
+		},
+		{
+			"_id": "req_d4fde2fdcea7447e9678e3bf0f233b31",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486848238091,
+			"created": 1486848169528,
+			"url": "http://192.168.83.4:5000/v3/role_assignments?include_names",
+			"name": "list-roles",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "x-subject-token",
+					"value": "3e3fa528a87b44fe9597a74e285b552a"
+				},
+				{
+					"name": "vary",
+					"value": "X-Auth-Token"
+				},
+				{
+					"name": "content-type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486839959654,
+			"_type": "request"
+		},
+		{
+			"_id": "req_ff035d51df69459a97193bf7a0646fca",
+			"parentId": "wrk_365417bba5254e63aa31fdb2537c3bd0",
+			"modified": 1486856743540,
+			"created": 1486855252299,
+			"url": "http://192.168.83.4:5000/v3/auth/tokens",
+			"name": "auth-scoped",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"auth\": {\n        \"identity\": {\n            \"methods\": [\n                \"password\"\n            ],\n            \"password\": {\n                \"user\": {\n\t\t\t\t\t\"id\": \"idm_user\",\n\t\t\t        \"password\": \"idm\"\n                }\n            }\n        },\n        \"scope\": {\n            \"project\": {\n                \"id\": \"idm_project\"\n            }\n        }\n    }\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1486848286923,
+			"_type": "request"
+		}
+	]
+}
