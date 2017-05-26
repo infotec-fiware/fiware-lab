@@ -65,7 +65,7 @@ source /etc/profile.d/java.csh
 
 ## Install Git
 sudo yum -y install git
-git clone -b demo https://github.com/danimaniarqsoft/fiware-orion-subscriber.git
+git clone https://github.com/infotec-fiware/green-orion.git
 sudo chown -R vagrant:vagrant fiware-orion-subscriber
 ## Install Mongodb
 sudo yum -y install mongodb-org
