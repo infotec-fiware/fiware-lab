@@ -66,7 +66,7 @@ source /etc/profile.d/java.csh
 ## Install Git
 sudo yum -y install git
 git clone https://github.com/infotec-fiware/green-orion.git
-sudo chown -R vagrant:vagrant fiware-orion-subscriber
+sudo chown -R vagrant:vagrant green-orion
 ## Install Mongodb
 sudo yum -y install mongodb-org
 sudo systemctl start mongod
