@@ -68,6 +68,6 @@ sudo yum -y install git
 git clone -b demo https://github.com/danimaniarqsoft/fiware-orion-subscriber.git
 sudo chown -R vagrant:vagrant fiware-orion-subscriber
 ## Install Mongodb
-## sudo yum -y install mongodb-org
-## sudo systemctl start mongod
+sudo yum -y install mongodb-org
+sudo systemctl start mongod
 
