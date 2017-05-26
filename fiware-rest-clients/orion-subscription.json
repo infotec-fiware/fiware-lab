@@ -1,0 +1,469 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2017-05-26T18:37:31.396Z",
+	"__export_source": "insomnia.desktop.app:v4.2.11",
+	"resources": [
+		{
+			"_id": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"parentId": null,
+			"modified": 1495737976298,
+			"created": 1488259692950,
+			"name": "orion-consumer",
+			"description": "",
+			"certificates": [],
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_c446741f7bdf45189a1c572a1f9dcf2e",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976297,
+			"created": 1488259796120,
+			"name": "Base Environment",
+			"data": {
+				"localhost": "http://localhost:1026"
+			},
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_6601fead58ba4b54920dd3484052c55d",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976296,
+			"created": 1488259796394,
+			"name": "Default Jar",
+			"cookies": [
+				{
+					"creation": "2017-03-01T18:55:11.626Z",
+					"key": "JSESSIONID",
+					"value": "A205C4BE827502350FE8F2786A69B320",
+					"path": "/",
+					"httpOnly": true,
+					"hostOnly": true,
+					"domain": "localhost",
+					"lastAccessed": "2017-03-01T19:09:32.360Z"
+				}
+			],
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_1117a8798e5548bba3fb1a912a5a8279",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495738093841,
+			"created": 1495738011549,
+			"name": "subscriptions",
+			"environment": {},
+			"metaSortKey": -1495738011549,
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_e205b5ac5bb24042aa09918b4ef17c34",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495738755299,
+			"created": 1495738755299,
+			"name": "entity",
+			"environment": {},
+			"metaSortKey": -1495738755299,
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_240c3f5efa21403999cdacb8124bca37",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495738736481,
+			"created": 1495738736481,
+			"url": "http://localhost:8080/users",
+			"name": "get-user (Copy)",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702101,
+			"_type": "request"
+		},
+		{
+			"_id": "req_2cac67413beb4a1bb750c21e37bf6ad6",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976295,
+			"created": 1488394498161,
+			"url": "http://localhost:8080/notifications",
+			"name": "get-logout",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702099,
+			"_type": "request"
+		},
+		{
+			"_id": "req_479f6032d6984108ac48bacc82e23e08",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495738129755,
+			"created": 1495689857502,
+			"url": "http://localhost:8080/notifications",
+			"name": "create-notifications-o3",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": \"Room1\",\n\t\t\t\"nombre\": {\n\t\t\t\t\"metadata\": {},\n\t\t\t\t\"type\": \"Float\",\n\t\t\t\t\"value\": 28.5\n\t\t\t},\n\t\t\t\n\t\t\t\"type\": \"Room\"\n\t\t}\n\t],\n\t\"subscriptionId\": \"57458eb60962ef754e7c0998\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702101,
+			"_type": "request"
+		},
+		{
+			"_id": "req_60cb1a7cdc86424784e5ff225f51f646",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495745031747,
+			"created": 1488260905626,
+			"url": "http://localhost:8081/notifications",
+			"name": "create-notifications",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"data\": [\n\t\t{\n\t\t\t\"id\": \"CDMX-AmbientObserved-3\",\n\t\t\t\"type\": \"AirQualityObserved\",\n\t\t\t\"CO\": \"500\",\n\t\t\t\"NO2\": \"69\",\n\t\t\t\"O3\": 21,\n\t\t\t\"PM10\": 999,\n\t\t\t\"SO2\": \"11\",\n\t\t\t\"address\": {\n\t\t\t\t\"addressCountry\": \"MX\",\n\t\t\t\t\"addressLocality\": \"Ciudad de México\",\n\t\t\t\t\"streetAddress\": \"Acolman\"\n\t\t\t},\n\t\t\t\"dateObserved\": \"2019-05-14T22:00:00.00Z\",\n\t\t\t\"location\": {\n\t\t\t\t\"type\": \"Point\",\n\t\t\t\t\"coordinates\": [\n\t\t\t\t\t-99.122984000,\n\t\t\t\t\t19.431768000\n\t\t\t\t]\n\t\t\t},\n\t\t\t\"measurand\": [\n\t\t\t\t\"CO, 500, PPM, Carbon Monoxide\",\n\t\t\t\t\"03, 45, PPB, Nitrogen Monoxide\",\n\t\t\t\t\"NO2, 69, PPB, Nitrogen Dioxide\",\n\t\t\t\t\"SO2, 11, PPB, Sulfur Dioxide\",\n\t\t\t\t\"PM10, 139, GQ, Particle Pollution\"\n\t\t\t],\n\t\t\t\"relativeHumidity\": \"0.54\",\n\t\t\t\"source\": \"http://www.aire.cdmx.gob.mx/\",\n\t\t\t\"temperature\": \"31\"\n\t\t}\n\t],\n\t\"subscriptionId\": \"57458eb60962ef754e7c0998\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702102,
+			"_type": "request"
+		},
+		{
+			"_id": "req_63b0f270faf94093932473403559b2de",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976293,
+			"created": 1488424715182,
+			"url": "http://localhost:8080/notifications",
+			"name": "delete-notifications",
+			"method": "DELETE",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702101,
+			"_type": "request"
+		},
+		{
+			"_id": "req_6c0aea807cc04bb08f4defe63ba0953d",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976292,
+			"created": 1488428410434,
+			"url": "http://192.168.83.3:1026/v2/entities/Station1/attrs/o3/value",
+			"name": "update-station1",
+			"method": "PUT",
+			"body": {
+				"mimeType": "text/plain",
+				"text": "123"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "text/plain"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702097,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a991ce67c72543dea415a18f44c630a2",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976291,
+			"created": 1488261008960,
+			"url": "http://127.0.0.1:8080/notifications",
+			"name": "create-notifications-text-plain",
+			"method": "GET",
+			"body": {
+				"mimeType": "",
+				"text": "2233"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "text/plain"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702101,
+			"_type": "request"
+		},
+		{
+			"_id": "req_b5b1f82e0d604e64a1fd7463a9850f42",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976288,
+			"created": 1488343564951,
+			"url": "http://localhost:8080/notifications",
+			"name": "get-notifications",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702100,
+			"_type": "request"
+		},
+		{
+			"_id": "req_b78b2948f15c4e68bda5a76f837d1d20",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976288,
+			"created": 1488260914861,
+			"url": "http://localhost:8080/notifications",
+			"name": "get-notifications",
+			"method": "GET",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"daniel.cortes@infotec.mx\",\n\t\"name\": \"daniel\",\n\t\"firstName\": \"cortes\",\n\t\"secondName\": \"pichardo\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702101,
+			"_type": "request"
+		},
+		{
+			"_id": "req_dd39166d446147e686477655cc5c7a14",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976286,
+			"created": 1488428093504,
+			"url": "http://localhost:1026/v2/entities",
+			"name": "create-station1",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"id\": \"Station1\",\n\t\"type\": \"EstacionMonitoreoContaminantes\",\n\t\"co\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 0,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 1\n\t\t\t}\n\t\t}\n\t},\n\t\"fecha\": {\n\t\t\"type\": \"text\",\n\t\t\"value\": \"01/03/2017\",\n\t\t\"metadata\": {}\n\t},\n\t\"hora\": {\n\t\t\"type\": \"text\",\n\t\t\"value\": \"17:07:54\",\n\t\t\"metadata\": {}\n\t},\n\t\"latitud\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 19.291278200,\n\t\t\"metadata\": {}\n\t},\n\t\"longitud\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": -99.163302400,\n\t\t\"metadata\": {}\n\t},\n\t\"no\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 1,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 4\n\t\t\t}\n\t\t}\n\t},\n\t\"no2\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 5,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 3\n\t\t\t}\n\t\t}\n\t},\n\t\"nombre\": {\n\t\t\"type\": \"text\",\n\t\t\"value\": \"Tlalpan\",\n\t\t\"metadata\": {}\n\t},\n\t\"nox\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 2,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 5\n\t\t\t}\n\t\t}\n\t},\n\t\"o3\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 9,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 2\n\t\t\t}\n\t\t}\n\t},\n\t\"pm10\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 9,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 7\n\t\t\t}\n\t\t}\n\t},\n\t\"pm2_5\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 5,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 8\n\t\t\t}\n\t\t}\n\t},\n\t\"so2\": {\n\t\t\"type\": \"float\",\n\t\t\"value\": 2,\n\t\t\"metadata\": {\n\t\t\t\"id\": {\n\t\t\t\t\"type\": \"Integer\",\n\t\t\t\t\"value\": 6\n\t\t\t}\n\t\t}\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702098,
+			"_type": "request"
+		},
+		{
+			"_id": "req_f579649d76d643ed8bb2c2b33fc0fbc4",
+			"parentId": "wrk_40d6094c226f4d9fbe6ea6e350a64e74",
+			"modified": 1495737976281,
+			"created": 1488428457454,
+			"url": "http://localhost:1026/v2/subscriptions",
+			"name": "get-all-subscribe",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702096,
+			"_type": "request"
+		},
+		{
+			"_id": "req_238f3beff6e644e4aac097d64999332e",
+			"parentId": "fld_1117a8798e5548bba3fb1a912a5a8279",
+			"modified": 1495749640971,
+			"created": 1495749568367,
+			"url": "http://localhost:1026/v2/subscriptions",
+			"name": "create-subscription -test",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"notification\": {\n\t\t\"http\": {\n\t\t\t\"url\": \"http://172.17.0.1:8080/notifications\",\n\t\t\t\"method\": \"POST\"\n\t\t},\n\t\t\"attrsFormat\": \"keyValues\",\n\t\t\"attrs\": [\n\t\t\t\"id\",\n\t\t\t\"type\",\n\t\t\t\"CO\",\n\t\t\t\"NO2\",\n\t\t\t\"O3\"\n\t\t]\n\t},\n\t\"expires\": \"2020-04-05T14:00:00.00Z\",\n\t\"throttling\": 1,\n\t\"subject\": {\n\t\t\"entities\": [\n\t\t\t{\n\t\t\t\t\"id\": \"CDMX-AmbientObserved-3\",\n\t\t\t\t\"type\": \"AirQualityObserveds\"\n\t\t\t}\n\t\t],\n\t\t\"condition\": {\n\t\t\t\"attrs\": [\n\t\t\t\t\"O3\"\n\t\t\t]\n\t\t}\n\t},\n\t\"description\": \"A subscription to get info about Station\"\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702101,
+			"_type": "request"
+		},
+		{
+			"_id": "req_5ba6663e11ce404a87ffff29b36118fa",
+			"parentId": "fld_1117a8798e5548bba3fb1a912a5a8279",
+			"modified": 1495744078342,
+			"created": 1495743845865,
+			"url": "http://localhost:1026/v2/subscriptions/5927379a512cc9843d64d7cd",
+			"name": "delete-subscription",
+			"method": "DELETE",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702099.5,
+			"_type": "request"
+		},
+		{
+			"_id": "req_87ca4af3ec5b4234ba74ba7a75e7350b",
+			"parentId": "fld_1117a8798e5548bba3fb1a912a5a8279",
+			"modified": 1495742420237,
+			"created": 1495742368701,
+			"url": "http://localhost:1026/v2/subscriptions",
+			"name": "get-subscription",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702100.5,
+			"_type": "request"
+		},
+		{
+			"_id": "req_beddf35c33a84627b4388afb09c31085",
+			"parentId": "fld_1117a8798e5548bba3fb1a912a5a8279",
+			"modified": 1495742828846,
+			"created": 1488428321600,
+			"url": "http://localhost:1026/v2/subscriptions",
+			"name": "create-subscription",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"description\": \"A subscription to get info about Station\",\n\t\"subject\": {\n\t\t\"entities\": [\n\t\t\t{\n\t\t\t\t\"id\": \"CDMX-AmbientObserved-3\",\n\t\t\t\t\"type\": \"AirQualityObserved\"\n\t\t\t}\n\t\t],\n\t\t\"condition\": {\n\t\t\t\"attrs\": [\n\t\t\t\t\"O3\"\n\t\t\t]\n\t\t}\n\t},\n\t\"notification\": {\n\t\t\"http\": {\n\t\t\t\"url\": \"http://172.17.0.1:8080/notifications\",\n\t\t\t\"method\": \"POST\"\n\t\t},\n\t\t\"attrsFormat\": \"keyValues\",\n\t\t\"attrs\": [\n\t\t\t\"id\",\n\t\t\t\"type\",\n\t\t\t\"CO\",\n\t\t\t\"NO2\",\n\t\t\t\"O3\"\n\t\t]\n\t},\n\t\"expires\": \"2020-04-05T14:00:00.00Z\",\n\t\"throttling\": 1\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702101.5,
+			"_type": "request"
+		},
+		{
+			"_id": "req_6569b4ea19ec4ed1b1f28d4830670259",
+			"parentId": "fld_e205b5ac5bb24042aa09918b4ef17c34",
+			"modified": 1495742261055,
+			"created": 1495738458097,
+			"url": "http://localhost:1026/v2/entities/CDMX-AmbientObserved-3/",
+			"name": "get-entity",
+			"method": "GET",
+			"body": {
+				"text": ""
+			},
+			"parameters": [
+				{
+					"name": "attrs",
+					"value": "O2",
+					"disabled": true
+				},
+				{
+					"name": "options",
+					"value": "keyValues",
+					"disabled": false
+				}
+			],
+			"headers": [],
+			"authentication": {},
+			"metaSortKey": -1488259702078,
+			"_type": "request"
+		},
+		{
+			"_id": "req_a98c2fe7eeb649fa8742a849a78f2e9e",
+			"parentId": "fld_e205b5ac5bb24042aa09918b4ef17c34",
+			"modified": 1495742028740,
+			"created": 1488259702103,
+			"url": "http://localhost:1026/v2/entities",
+			"name": "create-entity",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"id\":\"CDMX-AmbientObserved-6\",\n\t\"type\":\"AirQualityObserved\",\n  \t\"address\": {\n   \t \t\"type\": \"StructuredValue\",\n    \t\"value\": {\n      \t\t\"addressCountry\": \"MX\",\n\t\t\t\"addressLocality\": \"Ciudad de México\",\n\t\t\t\"streetAddress\": \"Acolman\"\t\t\t\n        }\n    },\n\t\"dateObserved\":{\n\t\t\"type\":\"DateTime\",\n\t\t\"value\":\"2016-03-14T17:00:00-05:00\"\n\t},\n  \t\"location\": {\n   \t\t \"value\": {\n      \t \t\"type\": \"Point\",\n      \t \t\"coordinates\": [-99.122984, 19.431768]\n   \t\t},\n    \t\"type\": \"geo:json\"\n  \t},\n\t\"source\":{\n\t\t\"type\":\"text\",\n\t\t\"value\":\"http://www.aire.cdmx.gob.mx/\"\n\t},\n\t\"temperature\":{\n\t\t\"type\":\"text\",\n\t\t\"value\":\"12.2\"\n\t},\n\t\"relativeHumidity\":{\n\t\t\"type\":\"text\",\n\t\t\"value\":\"0.54\"\n\t},\n\t\"measurand\": {\n\t\t\"type\":\"text\",\n\t\t\"value\": [\n\t\t\t\"CO, 500, PPM, Carbon Monoxide\",\n\t\t\t\"03, 45, PPB, Nitrogen Monoxide\",\n     \t\t\"NO2, 69, PPB, Nitrogen Dioxide\",\n     \t\t\"SO2, 11, PPB, Sulfur Dioxide\",\n\t\t\t\"PM10, 139, GQ, Particle Pollution\"\n\t\t]\n\t},\n\t\"CO\":{\n\t\t\"type\":\"number\",\n\t\t\"value\": 500\n\t},\n\t\"O3\":{\n\t\t\"type\":\"number\",\n\t\t\"value\": 45\n\t},\n\t\"NO2\":{\n\t\t\"type\":\"number\",\n\t\t\"value\": 69\n\t},\n\t\"SO2\":{\n\t\t\"type\":\"number\",\n\t\t\"value\": 11\n\t},\n\t\"PM10\":{\n\t\t\"type\":\"number\",\n\t\t\"value\": 139\n\t}\n\t\n}\n"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702103,
+			"_type": "request"
+		},
+		{
+			"_id": "req_cee8d6336fd146559baf0896175c419f",
+			"parentId": "fld_e205b5ac5bb24042aa09918b4ef17c34",
+			"modified": 1495738775882,
+			"created": 1495738307373,
+			"url": "http://localhost:1026/v2/entities/CDMX-AmbientObserved-3/attrs",
+			"name": "update-entity",
+			"method": "POST",
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"dateObserved\": {\n\t\t\"type\": \"DateTime\",\n\t\t\"value\": \"2017-29-14T17:00:00-05:00\"\n\t},\n\t\"temperature\": {\n\t\t\"type\": \"text\",\n\t\t\"value\": \"31\"\n\t},\n\t\"relativeHumidity\": {\n\t\t\"type\": \"text\",\n\t\t\"value\": \"0.54\"\n\t},\n\t\"measurand\": {\n\t\t\"type\": \"text\",\n\t\t\"value\": [\n\t\t\t\"CO, 500, PPM, Carbon Monoxide\",\n\t\t\t\"03, 45, PPB, Nitrogen Monoxide\",\n\t\t\t\"NO2, 69, PPB, Nitrogen Dioxide\",\n\t\t\t\"SO2, 11, PPB, Sulfur Dioxide\",\n\t\t\t\"PM10, 139, GQ, Particle Pollution\"\n\t\t]\n\t},\n\t\"CO\": {\n\t\t\"type\": \"number\",\n\t\t\"value\": \"500\"\n\t},\n\t\"O3\": {\n\t\t\"type\": \"number\",\n\t\t\"value\": \"45\"\n\t},\n\t\"NO2\": {\n\t\t\"type\": \"number\",\n\t\t\"value\": \"69\"\n\t},\n\t\"SO2\": {\n\t\t\"type\": \"number\",\n\t\t\"value\": \"11\"\n\t},\n\t\"PM10\": {\n\t\t\"type\": \"number\",\n\t\t\"value\": \"139\"\n\t}\n}"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702053,
+			"_type": "request"
+		},
+		{
+			"_id": "req_fd555b65876e4f73a5ad6f5072738f2e",
+			"parentId": "fld_e205b5ac5bb24042aa09918b4ef17c34",
+			"modified": 1495744109213,
+			"created": 1495741796964,
+			"url": "http://localhost:1026/v2/entities/CDMX-AmbientObserved-3/attrs/O3/value",
+			"name": "update-value",
+			"method": "PUT",
+			"body": {
+				"mimeType": "text/plain",
+				"text": "sddd"
+			},
+			"parameters": [],
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "text/plain"
+				}
+			],
+			"authentication": {},
+			"metaSortKey": -1488259702052,
+			"_type": "request"
+		}
+	]
+}
